@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+    <section class="hero is-black">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title", style="color: blueviolet;">
+              Olá Mundo!
+            </h1>
+            <h2 class="subtitle", style="color: blueviolet;">
+              Muito bem vindo
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {% block content %}
+
+      {% endblock %}
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+              Blog criado por João Pedro.
+          </p>
+        </div>
+      </footer>
+</body>
+</html>
