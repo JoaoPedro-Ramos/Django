@@ -7,16 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href=" {% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/wysiwyg.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
 </head>
 <body>
     <section class="hero is-black">
         <div class="hero-body">
+          <div class="menu">
+            <li><a href="{% url 'about' %}">Sobre</a></li>
+          </div>
           <div class="container">
             <h1 class="title", style="color: blueviolet;">
-              Olá Mundo!
+              TÍTULO DO BLOG 
             </h1>
             <h2 class="subtitle", style="color: blueviolet;">
-              Muito bem vindo
+              Muito bem vindo!
             </h2>
           </div>
         </div>

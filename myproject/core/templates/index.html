@@ -1,14 +1,27 @@
 {% extends './base.html' %}
 
 {% block content %}
+    {% if post_list%}
+        {% for post in post_list %}
+        <section class="section">
+            <div class="container">
+                <h1 class="title"><a href="{% url 'detail' post.title %}", style="color: blueviolet;">{{ post.title }}</a></h1>
+                <h2 class="subtitle">
+                    {{ post.description }}
+                </h2>
+            </div>
+        </section>
+        {% endfor %}
+    {% else %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title", style="color: blueviolet;">Não exite post cadastrado</h1>
+            <h2 class="subtitle">
+            Infelizmente não encontramos nemhum arquivo de post no momento 
+            </h2>
+        </div>
+    </section>
 
-<section class="section">
-    <div class="container">
-        <h1 class="title", style="color: blueviolet;">Section</h1>
-        <h2 class="subtitle">
-        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-        </h2>
-    </div>
-</section>
+    {% endif %}
 
 {% endblock %}
